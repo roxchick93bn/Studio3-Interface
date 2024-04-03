@@ -1,0 +1,42 @@
+body {
+  .select {
+    color: $gray-200 !important;
+    text-transform: none;
+    border-radius: 0;
+    border: none;
+    transition: all 0.3s;
+
+    :global(.MuiSelect-select) {
+      padding: 8px 12px;
+      padding-right: 40px;
+      border-radius: 0;
+      font-family: $font-primary;
+      font-size: 15px;
+      font-weight: 400;
+      border: 1px solid $dark-150;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    :global(.MuiOutlinedInput-notchedOutline) {
+      border: none;
+    }
+
+    :global(.MuiSelect-iconOutlined) {
+      color: $gray-200;
+      transition: all 0.3s;
+    }
+
+    &:hover,
+    &:global(.Mui-focused),
+    &.active {
+      color: $white !important;
+      background: $dark-150;
+
+      :global(.MuiSelect-iconOutlined) {
+        color: $white;
+      }
+    }
+  }
+}

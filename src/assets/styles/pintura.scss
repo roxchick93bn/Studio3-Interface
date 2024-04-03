@@ -1,0 +1,11 @@
+.pintura-editor {
+  --color-background: 24, 26, 27; // $dark-50
+  --color-foreground: 221, 218, 213; // $white
+}
+
+@media (prefers-color-scheme: dark) {
+  .pintura-editor {
+    --color-background: 24, 26, 27; // $dark-50
+    --color-foreground: 221, 218, 213; // $white
+  }
+}

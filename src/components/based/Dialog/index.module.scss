@@ -1,0 +1,43 @@
+.dialog {
+  background: $dialog-mask;
+
+  :global(.MuiDialog-paper) {
+    min-width: 320px;
+    background: $dark-100;
+    border: 1px solid $dark-150;
+    border-radius: 0;
+    padding: 24px;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 8px;
+
+    .close {
+      position: absolute;
+      right: 12px;
+      top: 12px;
+    }
+
+    section.heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 24px;
+
+      .title {
+        font-family: $font-tertiary;
+        font-size: 18px;
+        font-weight: 300;
+        color: $gray-100;
+      }
+    }
+
+    section.content {
+      padding-top: 12px;
+      font-family: $font-primary;
+      font-size: 16px;
+      font-weight: 300;
+    }
+  }
+}

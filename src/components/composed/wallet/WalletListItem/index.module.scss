@@ -1,0 +1,49 @@
+body {
+  .item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-start;
+    column-gap: 12px;
+    background: $dark-100;
+    border-bottom: 1px solid $dark-150;
+    padding: 12px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: $font-primary;
+    position: relative;
+
+    &.selected {
+      border: 1px solid $gray-200;
+      background: $gray-200 !important;
+      color: $black !important;
+
+      &:hover {
+        background: $gray-200 !important;
+      }
+    }
+
+    .badge {
+      background: $dark-150;
+      color: $white;
+      padding: 2px 5px;
+      font-size: 10px;
+      position: absolute;
+      right: 16px;
+      border-radius: 8px;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background: $dark-150 !important;
+    }
+
+    img {
+      width: auto;
+      height: 30px;
+    }
+  }
+}

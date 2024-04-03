@@ -1,0 +1,94 @@
+.hidden{
+  display: none;
+}
+.AssetPanel{
+  position: absolute;
+  padding: 10px 0px;
+  top: 78px;
+  left:81px;
+  display: flex;
+  flex-direction: column;
+  width: 340px;
+  height: calc(100vh - 80px);
+  background-color: rgba(100, 100, 100, 0.2);
+  align-items: center;
+  color: white;
+  z-index: 15;
+  border-right: 1px solid rgba(100,100,100,0.5);
+
+  .header{
+    font-weight: 400;
+    font-size: 13px;
+    padding: 17px 5px;
+    width: calc(100% - 30px);
+    display: flex;
+    justify-content: space-between;
+    span{
+      padding-left: 4px;
+      transition: all 0.5s;
+    }
+    span:hover{
+      padding-left: 0px;
+      padding-right: 4px;
+      transition: all 0.5s;
+      opacity: 50%;
+    }
+  }
+  .icon{
+    position: absolute;
+    top: 11px;
+    left: 30px;
+  }
+  .itemWidget{
+    width: 141px;
+    height: 88px;
+  }
+  .itemView{
+    width: 100%;
+    min-height: 1px;
+    min-width: 280px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    column-gap: 20px;
+  }
+  .itemViewContainer{
+    padding-left: 20px;
+    margin-top: 20px;
+    overflow-y: scroll;
+    height: calc(100% - 110px);
+    transform: translate(-10px,0);
+    min-height: 1px;
+  }
+  .searchBar{
+    display: flex;
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgba(100,100,100,0.2);
+    padding-left: 50px;
+    color: gainsboro;
+    outline: none;
+    border: none;
+    box-shadow: none;
+  }
+  .showTemplate{
+    width: 100%;
+    background-color: rgba(100,100,100,0.1);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(100,100,100,0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(100,100,100,0.8);
+  border-radius: 10px;
+  border: 1px solid #333;
+}

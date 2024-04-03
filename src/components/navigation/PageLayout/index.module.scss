@@ -1,0 +1,10 @@
+.layout {
+  display: flex;
+  width: 100%;
+  background: $dark-50;
+
+  .inner {
+    flex-grow: 1;
+    min-height: 100vh;
+  }
+}

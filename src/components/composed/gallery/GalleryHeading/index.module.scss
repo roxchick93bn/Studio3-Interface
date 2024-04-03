@@ -1,0 +1,41 @@
+.inner {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: -20px;
+
+  .title {
+    font-size: 20px;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+  }
+
+  // .inputWrapper {
+  //   position: relative;
+  //   margin-left: 40px;
+
+  //   .searchIcon {
+  //     position: absolute;
+  //     left: 13px;
+  //     top: 15px;
+  //     z-index: 1;
+  //     cursor: pointer;
+  //     pointer-events: none;
+  //   }
+
+  //   .searchInput {
+  //     :global(.MuiInputBase-root) {
+  //       width: 54px;
+
+  //       &:global(.Mui-focused) {
+  //         width: 400px;
+  //       }
+
+  //       input {
+  //         padding-left: 40px;
+  //       }
+  //     }
+  //   }
+  // }
+}

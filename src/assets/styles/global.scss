@@ -1,0 +1,50 @@
+@import-normalize;
+
+@import './fonts';
+
+@import './colors';
+
+@import './mixins';
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $white;
+
+  .MuiMenu-paper {
+    border-radius: 0;
+    background: $dark-150;
+    color: $gray-200;
+    box-shadow: $dropdown-shadow;
+
+    .MuiList-root {
+      padding: 0;
+
+      .MuiMenuItem-root {
+        font-family: $font-primary;
+        font-size: 15px;
+        font-weight: 400;
+        padding: 8px 12px;
+        transition: all 0.3s;
+
+        &.Mui-selected {
+          color: $white;
+          background: rgba($dark-200, 0.5);
+        }
+
+        &:hover {
+          background: $dark-200;
+        }
+      }
+    }
+  }
+}
+
+body * {
+  font-family: $font-primary;
+  box-sizing: border-box;
+}
+
+$sidebar-width: 120px;
+$item-drawer-width: 400px;

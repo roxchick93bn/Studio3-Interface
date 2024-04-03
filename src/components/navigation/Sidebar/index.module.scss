@@ -1,0 +1,44 @@
+.sidebar {
+  height: 100vh;
+  width: $sidebar-width;
+  background: $dark-50;
+  // This is so the right border doesn't fade as it hits the top and bottom
+  border-right: 1px solid $dark-100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 0;
+  box-sizing: border-box;
+  border-radius: 0;
+
+  section.topSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 50px;
+
+    .logo {
+      margin: 10px 0;
+      max-width: 44px;
+    }
+
+    .navMenus {
+      width: 100%;
+
+      .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 16px;
+        font-size: 12px;
+      }
+    }
+  }
+
+  section.bottomSection {
+    border-top: 1px solid $dark-100;
+    padding-top: 20px;
+    margin: 0 16px;
+  }
+}

@@ -1,0 +1,83 @@
+:root {
+  size: 0.8;
+}
+@font-face {
+  font-family: 'Impact';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/l/font?kit=HhyVU5gq9PCuP11_LNCH&skey=5128cd07406988e&v=v19) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Impact-meme';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/l/font?kit=HhyVU5gq9PCuP11_LNCH&skey=5128cd07406988e&v=v19) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+.editor {
+  height: 100vh;
+  .sticker{
+    width: 40px;
+    height: 40px;
+  }
+}
+.gotoBack{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: #aaa;
+  position: absolute;
+  left: 10px;
+  top: 25px;
+  padding-top: 10px;
+  height: 50px;
+  width: 130px;
+  z-index: 5;
+  svg{
+    transition: all 0.3s;
+    transform: scale(0.8,0.8);
+  }
+  svg:nth-of-type(2) {
+    transform: scale(0.6, 0.6);
+  }
+  svg:nth-of-type(1) {
+    transform: scale(0.4, 0.4);
+  }
+  cursor: pointer;
+  &:hover{
+    svg{
+      margin-left: -5px;
+      margin-right: 5px;
+      transition: all 0.3s;
+    }
+  }
+}
+
+.asset{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-size: 0.75em;
+  color: #aaa;
+  position: absolute;
+  flex-direction: column;
+  left: 8px;
+  top: 86px;
+  height: 64px;
+  width: 64px;
+  z-index: 5;
+  cursor: pointer;
+  border-radius: 32px;
+  svg{
+    transform: scale(0.9,0.9);
+  }
+  &:hover{
+    outline: 1px solid rgba(100,100,100,0.6);
+  }
+}

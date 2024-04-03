@@ -1,0 +1,355 @@
+body {
+  .thumbnail{
+    width: 285px;
+    .imageWrapper{
+      height: 200px;
+    }
+    .imageWrapper {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // padding-bottom: 10px;
+      overflow: hidden;
+      // position: relative;
+
+      > span {
+        height: 100%;
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        // border: 1px solid $dark-150;
+      }
+    }
+
+    .infoContainer {
+      padding: 16px 12px;
+      // margin-top: auto;
+
+      .title {
+        transition: all 0.3s;
+        font-family: $font-secondary;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        min-width: 0;
+      }
+    }
+
+    .info {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .meta {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+
+        .row {
+          font-family: $font-secondary;
+          font-style: italic;
+          font-size: 13px;
+        }
+      }
+
+      .avatar {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &:hover {
+      border: 1px solid $dark-200;
+
+      .title {
+        color: $white;
+      }
+
+      .meta {
+        color: $gray-150;
+      }
+    }
+
+    &:active {
+      border: 1px solid $gray-50;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px; /* adjust it as needed */
+    }
+  }
+  
+
+
+
+
+
+
+  .asset{
+    position: relative;
+    width: 139px;
+    margin: 5px 0px;
+    .infoContainer {
+      display: none;
+    }
+    &:hover{
+      .infoContainer {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding: 8px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // margin-top: auto;
+        background-color: rgba(0,0,0,0.4);
+  
+        .title {
+          padding: 0px 20px;
+          text-align: center;
+          transition: all 0.3s;
+          font-family: $font-secondary;
+          white-space: pre-wrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          min-width: 0;
+          font-size: 14px;
+          font-weight: bold;
+          color: white;
+        }
+        &:active{
+          display: none;
+        }
+      }
+    }
+    .imageWrapper{
+      height: 88px !important;
+    }
+
+    .info {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .meta {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+
+        .row {
+          font-family: $font-secondary;
+          font-style: italic;
+          font-size: 13px;
+        }
+      }
+
+      .avatar {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &:hover {
+
+      .title {
+        color: $white;
+      }
+
+      .meta {
+        color: $gray-150;
+      }
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px; /* adjust it as needed */
+    }
+  }
+  .widget {
+    padding-bottom: 0;
+    background: $dark-50;
+    border: 1px solid $dark-100;
+    color: $white;
+    border-radius: 0;
+    font-family: $font-tertiary;
+    font-weight: 300;
+    height: auto;
+    color: $gray-50;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    // row-gap: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: none;
+
+    .imageWrapper {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // padding-bottom: 10px;
+      overflow: hidden;
+      // position: relative;
+
+      > span {
+        height: 100%;
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        // border: 1px solid $dark-150;
+      }
+    }
+
+    &.selected {
+      border: 1px solid $gray-100;
+      // box-shadow: $widget-shadow;
+
+      .meta {
+        color: $gray-150;
+      }
+
+      .title {
+        color: $white;
+      }
+
+      &:hover {
+        border: 1px solid $gray-100;
+      }
+    }
+  }
+}
+
+.card {
+  
+  position: relative;
+  .check {
+    position: absolute;
+    display: none;
+    left: -5px;
+    top: -5px;
+    z-index: 20;
+    cursor: pointer;
+  }
+
+  .checked {
+    position: absolute;
+    display: block;
+    left: -5px;
+    top: -5px;
+    z-index: 20;
+    cursor:pointer;
+  }
+  
+  &:hover {
+    .check {
+      display: block;
+    }
+  }
+
+  .option {
+    position: absolute;
+    display: none;
+    right: -5px;
+    top: -5px;
+    z-index: 20;
+    cursor:pointer;
+  }
+
+  &:hover {
+    .option {
+      display: block;
+    }
+  }
+}
+
+.contextmenu {
+  position: absolute;
+  z-index: 5;
+  background: #252627;
+  border-radius: 10px;
+  width: 280px;
+  left: 265px;
+  top: 30px;
+}
+
+.option1 {
+  position: absolute;
+  display: block;
+  right: -5px;
+  top: -5px;
+  z-index: 20;
+  cursor:pointer;
+}
+
+.info {
+  color: rgb(160, 160, 160) !important;
+  font-size: 15px;
+}
+
+.border {
+  border-bottom: solid;
+  border-width: thin;
+  border-color: gray;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  cursor:pointer;
+}
+
+.download {
+  width: 100%;
+  color:black;
+  background-color: white;
+  border-radius: 5px;
+  padding-left:15px;
+  padding-right:15px;
+  padding-top:10px;
+  padding-bottom: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.mint{
+  padding:15px;
+}
+
+.list {
+  min-width: 80%;
+  div {
+    margin-bottom: 6px;
+    font-size: 14px;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+  }
+  input:focus, textarea:focus{
+    outline:none;
+  }
+}
+
+.input {
+  background-color: #292A2C;
+  color: white;
+  font-size: 14px;
+  border: 0.5px solid rgba(255, 255, 255, 0.06);
+}

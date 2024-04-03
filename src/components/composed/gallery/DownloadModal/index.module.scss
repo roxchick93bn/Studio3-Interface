@@ -1,0 +1,72 @@
+.modal {
+  :global(.MuiDialog-paper) {
+    min-width: 500px !important;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+
+      .select {
+        padding: 10px;
+        border-radius: 6px;
+
+        .option {
+          padding: 5px;
+        }
+      }
+
+      .list {
+        min-width: 80%;
+
+        div {
+          margin-bottom: 6px;
+        }
+
+        input,
+        textarea {
+          width: 100%;
+          padding: 8px;
+          border-radius: 6px;
+        }
+      }
+    }
+
+
+
+    .actions {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      column-gap: 10px;
+      margin-top: 20px;
+
+      .button {
+        border: 1px solid $dark-150;
+
+        &:hover {
+          background: $dark-150;
+        }
+
+        &:disabled {
+          cursor: not-allowed;
+        }
+      }
+
+      .submit {
+        background: $gray-200;
+        color: $dark-50 !important;
+
+        &:disabled {
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}
+
+.logo {
+  width: 30px;
+  margin-right: 10px;
+}

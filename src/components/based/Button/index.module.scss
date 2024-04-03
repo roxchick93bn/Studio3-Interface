@@ -1,0 +1,28 @@
+body {
+  .button {
+    color: $gray-50 !important;
+    font-size: 13px;
+    font-family: $font-tertiary;
+    font-weight: 400;
+    text-transform: none;
+    border-radius: 8px;
+
+    &:hover {
+      color: $white !important;
+      background: transparent;
+    }
+
+    &.small {
+      font-size: 13px;
+    }
+
+    &.medium {
+      font-size: 15px;
+      padding: 8px 12px;
+    }
+
+    &.large {
+      font-size: 17px;
+    }
+  }
+}

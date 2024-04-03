@@ -1,0 +1,22 @@
+body {
+  .tab {
+    color: $gray-50;
+    transition: 0.2s all;
+    text-transform: uppercase;
+
+    & * {
+      font-family: $font-primary;
+      font-weight: 300;
+    }
+
+    &:hover,
+    &:global(.Mui-selected) {
+      color: $white;
+    }
+
+    &:global(.Mui-disabled) {
+      color: $gray-50;
+      opacity: 0.2;
+    }
+  }
+}

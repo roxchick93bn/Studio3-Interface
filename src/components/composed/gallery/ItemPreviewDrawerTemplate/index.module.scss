@@ -1,0 +1,161 @@
+.drawer {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: calc(-1 * $item-drawer-width);
+    top: 0;
+    height: 100vh;
+    width: $item-drawer-width;
+    padding: 30px;
+    padding-bottom: 0;
+    background: $dark-50;
+    // This is so the left border doesn't fade as it hits the top and bottom
+    border-left: 1px solid $dark-150;
+    z-index: 99;
+    box-sizing: border-box;
+    transition: all 0.3s;
+    filter: blur(10px);
+    opacity: 0;
+    border-radius: 0;
+  
+    &.opened {
+      opacity: 1;
+      right: 0;
+      filter: blur(0);
+      // box-shadow: $drawer-shadow;
+    }
+  
+    .close {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+  
+    section.heading {
+      display: flex;
+      align-items: center;
+      column-gap: 12px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid $dark-150;
+      font-size: 16px;
+    }
+  
+    section.content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+      padding: 20px 0;
+      border-bottom: 1px solid $dark-150;
+  
+      .imageWrapper {
+        width: 100%;
+        height: calc($item-drawer-width - 60px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 10px;
+  
+        img {
+          width: 100%;
+          max-height: calc($item-drawer-width - 60px);
+          border: 1px solid $dark-150;
+          border-radius: 8px;
+        }
+      }
+  
+      .title {
+        font-size: 18px;
+        font-family: $font-secondary;
+        padding: 0 10px;
+      }
+  
+      .meta {
+        font-size: 13px;
+        font-weight: 300;
+        font-family: $font-tertiary;
+        padding: 0 10px;
+      }
+    }
+  
+    section.details {
+      padding: 20px 0;
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+      border-bottom: 1px solid $dark-150;
+  
+      & * {
+        font-family: $font-tertiary;
+      }
+  
+      .label {
+        margin-bottom: 10px;
+        padding: 0 10px;
+        font-size: 14px;
+        font-weight: 500;
+      }
+  
+      .row {
+        font-size: 13px;
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 300;
+  
+        .openInNew {
+          height: 20px;
+          width: 20px;
+  
+          svg {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+    }
+  
+    section.actions {
+      padding: 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 10px;
+      flex-grow: 1;
+  
+      .button {
+        color: $white;
+        text-decoration: none;
+        display: flex;
+        row-gap: 10px;
+        flex-direction: column;
+        align-items: center;
+        font-size: 13px;
+        width: 70px;
+        white-space: nowrap; // this may cause issues in the future - for now it's fine
+        transition: 0.2s all;
+        color: $gray-50;
+  
+        svg {
+          color: $white;
+        }
+  
+        :global(.MuiTouchRipple-root) {
+          border: 1px solid rgba($white, 0.2);
+          border-radius: 8px;
+          transition: 0.3s all;
+        }
+  
+        &:hover {
+          cursor: pointer;
+          color: $white;
+  
+          :global(.MuiTouchRipple-root) {
+            border: 1px solid rgba($white, 0.8);
+          }
+        }
+      }
+    }
+  }
+  
